@@ -1,0 +1,65 @@
+/* === Color Palette === */
+:root{
+  --primary:#4E2B14;   /* Dark chocolate */
+  --secondary:#D97B29; /* Caramel accent */
+  --background:#F4E2C0;/* Warm beige (page bg) */
+  --panel:#FFF8EE;     /* Light cream (cards) */
+  --text:#2B1C11;      /* Deep warm brown */
+  --accent:#8B3E2F;    /* Reddish-brown */
+}
+
+/* Map Bootstrap’s primary to palette */
+:root{
+  --bs-primary: var(--primary);
+  --bs-primary-rgb: 78,43,20;
+}
+
+/* Page background + base text */
+body.bg-app{
+  background: var(--background);
+  color: var(--text);
+}
+
+/* Navbar */
+.bg-brand{
+  background: linear-gradient(90deg,var(--primary),var(--accent));
+}
+
+/* Override Bootstrap button colors to match theme */
+.btn-primary{
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+.btn-primary:hover{
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+}
+.btn-outline-primary{
+  color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+.btn-outline-primary:hover{
+  background-color: var(--primary) !important;
+  color: #fff !important;
+}
+
+/* Hero card */
+.hero-lite{
+  background: var(--panel);
+}
+.hero-img{
+  max-height: 140px;
+  object-fit: cover;
+}
+
+/* Menu cards */
+.card-menu{
+  background: var(--panel);
+  border: 1px solid rgba(78,43,20,.15);
+}
+.menu-img{
+  border: 1px solid rgba(0,0,0,.08);
+}
+
+/* Utilities */
+.d-none{ display:none !important; }
